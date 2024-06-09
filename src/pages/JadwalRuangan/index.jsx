@@ -62,8 +62,7 @@ export default function JadwalRuangan() {
       await axios.get("http://localhost:3000/jadwal-ruangan").then((res) => {
         setJadwal(res.data);
       });
-      document.getElementById('qrCode').src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAYAAAB1PADUAAAAAklEQVR4AewaftIAAATTSURBVO3BQY4bSRAEwfAC//9l3znmqYBGJ2clIczwR6qWnFQtOqladFK16KRq0UnVopOqRSdVi06qFp1ULTqpWnRSteikatFJ1aKTqkUnVYs+eQnIb1JzA+QJNROQSc0NkBs1bwD5TWreOKladFK16KRq0SfL1GwCcgPkRs0TaiYgm4DcqLlRswnIppOqRSdVi06qFn3yZUCeUPOEmhsgk5oJyBNqJiCTmhs1E5A3gDyh5ptOqhadVC06qVr0ST0CZFIzAblR8y87qVp0UrXopGrRJ385IDdqJiA3aiYgk5o3gPzLTqoWnVQtOqla9MmXqfkmNROQGzU3QCY1b6iZgExq3lDzJzmpWnRSteikatEny4D8JiCTmgnIpGYCMqmZgExqJiCTmgnIpGYCMqm5AfInO6ladFK16KRqEf7IPwTIpGYC8oaaCciNmgnIjZq/2UnVopOqRSdVi/BHXgAyqZmATGomIJOaCcik5g0gk5obIDdqJiA3ajYBmdTcAJnUbDqpWnRSteikatEny4BMaiYgk5oJyKTmBsikZgLyJwHyhJobNROQGzUTkEnNGydVi06qFp1ULfpkmZongExqJiCTmhsgTwC5UfOEmjeATEBu1DwB5JtOqhadVC06qVr0yTIgk5pJzQ2QSc0Tar4JyKRmAjKpmYDcqJmATGpu1PyfTqoWnVQtOqlahD/yi4BMaiYgm9RMQG7UPAHkRs0NkDfUPAFkUrPppGrRSdWik6pFn7wEZFLzBJAbNZvUTEAmIJOaCcgbQJ5QMwF5AsgNkEnNGydVi06qFp1ULfpkGZAbNROQGyCb1NyomYBsUjMBuQEyqZmA/ElOqhadVC06qVr0yTI1E5A31NwAmdRMQJ4AcqNmAvIEkE1q/iQnVYtOqhadVC3CH3kByI2aJ4DcqJmAvKHmBsiNmk1AbtRMQG7UTEBu1LxxUrXopGrRSdWiT15ScwPkRs2k5gbIjZongExq3gAyqZmAbFLzhJoJyKaTqkUnVYtOqhZ98hKQSc0TQJ5QMwG5AfIEkEnNG0AmNROQTUAmNROQbzqpWnRSteikatEnL6mZgExqboBMap5Q84aaJ4BMam7U/CY1N2q+6aRq0UnVopOqRZ+8BGRSMwG5UXMD5EbNBOSb1ExAJjXfBOQJNROQGzVvnFQtOqladFK1CH/kLwZkUvMGkEnNBOSb1DwB5EbNbzqpWnRSteikatEnLwH5TWomNU8AmdRMaiYg/ycgk5ongDyh5o2TqkUnVYtOqhZ9skzNJiBPAJnUTGomIE+omYDcqLkBcqPmCTU3QL7ppGrRSdWik6pFn3wZkCfUPAFkUjMBuVFzA2QCcqPmDSCbgNyo2XRSteikatFJ1aJP/nJqnlBzA+QJNU8AmdS8AeRGzW86qVp0UrXopGrRJ385IDdqboDcqLkBMqmZgExqJiCTmgnIE0Bu1ExAJjVvnFQtOqladFK16JMvU/NNaiYgE5BJzRNAbtRMQN4AcqPmDSCTmk0nVYtOqhadVC36ZBmQ3wRkUjMBuVEzAZnUTEAmIDdqnlBzA+RGzRNAJjVvnFQtOqladFK1CH+kaslJ1aKTqkUnVYtOqhadVC06qVp0UrXopGrRSdWik6pFJ1WLTqoWnVQtOqladFK16D/Y3jBOjwrmLAAAAABJRU5ErkJggg=='
-    } catch (error) {
+      } catch (error) {
       console.log(error);
     }
   };
@@ -96,7 +95,6 @@ export default function JadwalRuangan() {
             allowEmpty={false}
           />
         </div>
-        <img id="qrCode" />
         {listJadwal.map((data, index) => {
           return (
             <Card
